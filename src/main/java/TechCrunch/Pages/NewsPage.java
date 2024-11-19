@@ -8,7 +8,7 @@ import java.util.List;
 
 public class NewsPage extends BasePage {
 
-    By articleTitle = By.cssSelector(".wp-block-post-title.has-body-1-font-size");
+    By articleTitle = By.cssSelector(".wp-block-post-title");
     By articleLinks = By.cssSelector(".entry-content a");
 
     public NewsPage(WebDriver webDriver) {

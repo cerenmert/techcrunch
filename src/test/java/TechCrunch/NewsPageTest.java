@@ -13,7 +13,7 @@ public class NewsPageTest extends BaseTest {
     @Test
     public void doesArticleTitleIsSameWithBrowserTitle() {
         HomePage homePage = new HomePage(webDriver);
-        NewsPage newsPage = homePage.clickOnNews(0);
+        NewsPage newsPage = homePage.clickOnNews(1);
         String articleTitle = newsPage.getArticleTitle();
         String browserTitle = newsPage.getBrowserTitle();
         Assert.assertEquals(articleTitle, browserTitle, "Article title is different from browser title!");
