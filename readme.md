@@ -39,6 +39,18 @@ This test case verifies that the article title is the same as the browser title.
 
 This test case verifies that the article has any links.
 
+### [EventsPageTest.java](src/test/java/TechCrunch/EventsPageTest.java)
+
+#### verifyListedDatesAndEventNamesContainSelectedYear
+
+This test case verifies that the listed dates and event names contain the selected year after filtering.
+
+### [StoryLinesPageTest.java](src/test/java/TechCrunch/StoryLinesPageTest.java)
+
+#### verifyTheCountOfBlockPosts
+
+This test case verifies that the total count of block posts.
+
 ## Author
 
 Created by [Ceren Çakır](mailto:ceren1481@hotmail.com)
