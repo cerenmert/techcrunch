@@ -10,7 +10,7 @@ import java.util.List;
 public class HomePageTest extends BaseTest {
 
     @Test
-    public void verifyEachNewsHasAnAuthor()  {
+    public void verifyEachNewsHasAnAuthor() {
         HomePage homePage = new HomePage(webDriver);
         List<WebElement> newsItems = homePage.getLatestNewsItems();
         for (WebElement eachNews : newsItems) {
@@ -22,7 +22,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test
-    public void verifyEachNewsHasAnImage()  {
+    public void verifyEachNewsHasAnImage() {
         HomePage homePage = new HomePage(webDriver);
         List<WebElement> newsItems = homePage.getLatestNewsItems();
         for (WebElement eachNews : newsItems) {

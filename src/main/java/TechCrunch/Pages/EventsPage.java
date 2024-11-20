@@ -21,13 +21,13 @@ public class EventsPage extends BasePage {
         super(driver);
     }
 
-    public void selectAnEventTypeForPastEvents(String eventType)  {
+    public void selectAnEventTypeForPastEvents(String eventType) {
         webDriver.findElement(eventTypeSelectBoxUnderPastEventsLabel).click();
         List<WebElement> options = webDriver.findElements(eventTypeOptions);
         options.stream().filter(option -> option.getText().equals(eventType)).findAny().get().click();
     }
 
-    public void selectAYearForPastEvents(String year)  {
+    public void selectAYearForPastEvents(String year) {
         webDriver.findElement(yearSelectboxUnderPastEventsLabel).click();
         List<WebElement> options = webDriver.findElements(yearSelectboxOptionsUnderPastEventsLabel);
         options.stream().filter(option -> option.getText().equals(year)).findAny().get().click();
@@ -40,7 +40,6 @@ public class EventsPage extends BasePage {
     public List<WebElement> getEventDateList() {
         return webDriver.findElements(listedDates);
     }
-
 
 
 }

@@ -13,7 +13,8 @@ public class HomePage extends BasePage {
     By image = By.cssSelector(".loop-card__figure img");
     By storyLinesItems = By.cssSelector(".wp-techcrunch-storyline-posts__item");
     By upcomingEventsSeeMoreButton = By.cssSelector(".upcoming-events-header-section .wp-block-buttons");
-
+    By signInButton = By.cssSelector(".wp-block-techcrunch-sign-in[aria-hidden=\"false\"]");
+    By loggedInUserNameSpanBy = By.cssSelector(".wp-block-techcrunch-sign-in[aria-hidden=\"false\"] .wp-block-techcrunch-sign-in__profile__first-name");
 
     public HomePage(WebDriver webDriver) {
         super(webDriver);
@@ -57,9 +58,17 @@ public class HomePage extends BasePage {
 
     public EventsPage clickOnUpcomingEventsSeeMoreButton() {
         webDriver.findElement(upcomingEventsSeeMoreButton).click();
-        return  new EventsPage(webDriver);
+        return new EventsPage(webDriver);
     }
 
+    public SignInPage clickSignInButton() throws InterruptedException {
+        Thread.sleep(2000);
+        webDriver.findElement(signInButton).click();
+        return new SignInPage(webDriver);
+    }
 
+    public String getLoggedInUserName() {
+        return webDriver.findElement(loggedInUserNameSpanBy).getText().replace("Hi, ", "");
+    }
 
 }

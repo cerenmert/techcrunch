@@ -10,7 +10,7 @@ public class StoryLinesPage extends BasePage {
     By blockPostsWithImageOrVideo = By.cssSelector(".wp-block-column:nth-of-type(1) .wp-block-post.tc_snippet");
 
     public StoryLinesPage(WebDriver webDriver) {
-            super(webDriver);
+        super(webDriver);
     }
 
     public int getCountOfAllBlockPosts() {
