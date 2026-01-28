@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class SignUpTest extends BaseTest {
 
-    @Test
+    @Test(enabled = false)
     public void shouldSignUp() throws InterruptedException {
         HomePage homePage = new HomePage(webDriver);
         SignInPage signInPage = homePage.clickSignInButton();

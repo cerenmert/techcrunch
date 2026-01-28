@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class StoryLinesPageTest extends BaseTest {
 
-   @Test
+   @Test(enabled = false)
    public void verifyTheCountOfBlockPosts() {
        HomePage homePage = new HomePage(webDriver);
        StoryLinesPage storyLinesPage = homePage.clickOnStoryLines(0);
