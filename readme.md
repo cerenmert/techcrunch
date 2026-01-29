@@ -1,56 +1,80 @@
-# Tech Blog Website Test Automation
+# TechCrunch Automation Project
 
-This project is a test automation project for a tech blog website. The project is written in Java and uses Selenium WebDriver, TestNG, and Maven. The project is designed to test the functionality of the website and to ensure that the website is working as expected.
+This repository contains the test automation framework for [TechCrunch](https://techcrunch.com/), a leading technology media property, dedicated to obsessively profiling startups, reviewing new internet products, and breaking tech news.
 
-## Getting Started
+The project is built using Java, Selenium WebDriver, and TestNG, employing the Page Object Model (POM) design pattern for better code maintenance and readability.
 
-To get started with the project, you will need to have Java, Maven, and an IDE installed on your machine. You will also need to have the Chrome browser installed on your machine.
+## 🛠 Technology Stack
+
+- **Language**: Java 15
+- **Automation Tool**: Selenium WebDriver
+- **Test Framework**: TestNG
+- **Build Tool**: Maven
+- **WebDriver Manager**: Bonigarcia WebDriverManager
+
+## 📂 Project Structure
+
+The project follows a standard Maven directory structure.
+
+- `src/main/java/TechCrunch/Pages`: Contains Page Object classes representing web pages (e.g., `HomePage`, `NewsPage`).
+- `src/main/java/TechCrunch/Users`: Contains User data models and helper classes.
+- `src/test/java/TechCrunch`: Contains the actual test classes (e.g., `HomePageTest`, `NewsPageTest`).
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-To run the project, you will need to have the following software installed on your machine:
+Ensure you have the following installed on your local machine:
+- **Java Development Kit (JDK) 15**: Verify with `java -version`
+- **Maven**: Verify with `mvn -version`
+- **Chrome Browser**
 
-- Java
-- Maven
-- Chrome browser
-- IDE (IntelliJ IDEA, Eclipse, etc.)
+### Installation
 
-## Test Cases
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd techcrunch
+   ```
+3. Install dependencies:
+   ```bash
+   mvn clean install -DskipTests
+   ```
 
-The project includes the following test cases:
+## 🧪 Running Tests
 
-### [HomePageTest.java](src/test/java/TechCrunch/HomePageTest.java)
+To run all tests using Maven:
+```bash
+mvn test
+```
 
-#### verifyEachNewsHasAnAuthor
+To run a specific test class:
+```bash
+mvn -Dtest=HomePageTest test
+```
 
-This test case verifies that each news on the homepage has an author.
+## 📝 Test Coverage
 
-#### verifyEachNewsHasAnImage
+### Homepage
+- **Verify Authors**: Ensures every news article on the homepage has an author listed.
+- **Verify Images**: Ensures every news article on the homepage has an associated image.
 
-This test case verifies that each news on the homepage has an image.
+### News Page
+- **Browser Title Check**: Verifies that the browser title matches the article title.
+- **Link Verification**: Checks for the presence of links within the article content.
 
-### [NewsPageTest.java](src/test/java/TechCrunch/NewsPageTest.java)
+### Events Page
+- **Filter Verification**: Verifies that filtering functionality works correctly (e.g., listing events for a selected year).
 
-#### doesArticleTitleIsSameWithBrowserTitle
+### Story Lines Page
+- **Block Post Count**: Verifies the correct count of block posts.
 
-This test case verifies that the article title is the same as the browser title.
+### Sign Up
+- **Flow Verification**: Validates the user sign-up process.
 
-#### verifyLinksInTheArticle
-
-This test case verifies that the article has any links.
-
-### [EventsPageTest.java](src/test/java/TechCrunch/EventsPageTest.java)
-
-#### verifyListedDatesAndEventNamesContainSelectedYear
-
-This test case verifies that the listed dates and event names contain the selected year after filtering.
-
-### [StoryLinesPageTest.java](src/test/java/TechCrunch/StoryLinesPageTest.java)
-
-#### verifyTheCountOfBlockPosts
-
-This test case verifies that the total count of block posts.
-
-## Author
+## 👤 Author
 
 Created by [Ceren Çakır](mailto:ceren1481@hotmail.com)
